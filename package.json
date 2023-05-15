@@ -7,7 +7,8 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm run dev --prefix frontend",
-    "deve": "concurrently \"npm run server \" \"npm run client\""
+    "deve": "concurrently \"npm run server \" \"npm run client\"",
+    "build": "vite build"
   },
   "author": "rhymes17",
   "license": "MIT",
