@@ -32,8 +32,4 @@ app.get("/", (req, res) => {
 
 app.use(handleError);
 
-if (process.env.API_PORT) {
-  app.listen(PORT, () => console.log(`Server running on port : ${PORT}`));
-}
-
-module.exports = app;
+app.listen(PORT, () => console.log(`Server running on port : ${PORT}`));
