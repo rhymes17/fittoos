@@ -56,7 +56,7 @@ const Home = () => {
     });
   };
 
-  if (isLoading) return <h1>Loading</h1>;
+  if (isLoading) return <h1>Loading...</h1>;
 
   return (
     <div className="flex flex-col pt-5 pb-12">
