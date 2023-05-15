@@ -5,7 +5,7 @@ const connectDB = require("./config/db");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 const app = express();
 
@@ -32,4 +32,8 @@ app.get("/", (req, res) => {
 
 app.use(handleError);
 
-app.listen(PORT, () => console.log(`Server running on port : ${PORT}`));
+if (process.env.API_PORT) {
+  app.listen(PORT, () => console.log(`Server running on port : ${PORT}`));
+}
+
+module.exports = app;
